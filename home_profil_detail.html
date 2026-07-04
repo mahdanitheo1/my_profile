@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - Detail</title>
+  <meta name="description" content="Halaman detail Tentang, Skill, Pengalaman, Kontak" />
+
+  <link rel="stylesheet" href="home_style.css" />
+  <link rel="stylesheet" href="profil_subpage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="brand-badge">T</div>
+          <a href="index.html" class="brand-link" aria-label="Kembali ke halaman profil">Profil Theo Mahdani</a>
+        </div>
+      </div>
+
+      <div class="nav-mobile" id="mobileNavDetail" aria-hidden="true">
+        <div class="nav-mobile-panel" role="dialog" aria-label="Menu navigasi" aria-modal="true">
+          <div class="nav-mobile-head">
+            <div class="brand-mini">
+              <div class="brand-badge brand-badge--mini">T</div>
+              <div class="brand-mini-text">Menu</div>
+            </div>
+            <button class="nav-mobile-close" type="button" aria-label="Tutup menu">
+              <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+
+          <div class="nav-mobile-links" aria-label="Navigasi menu mobile">
+            <a href="#" data-nav-about>Tentang</a>
+            <a href="#" data-nav-skill>Skill</a>
+            <a href="#" data-nav-exp>Pengalaman</a>
+            <a href="#" data-nav-contact>Kontak</a>
+          </div>
+
+          <div class="nav-mobile-actions">
+            <a class="btn btn-primary btn--mobile" href="index.html" aria-label="Kembali">
+              <span aria-hidden="true">↩️</span> Kembali
+            </a>
+          </div>
+        </div>
+        <button class="nav-mobile-overlay" type="button" aria-label="Tutup menu"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="subpage" aria-label="Konten detail profil">
+      <div class="container">
+        <div class="subpage-header">
+          <div>
+            <div class="subpage-title">Detail Profil</div>
+            <div class="subpage-badge">Klik Panel Di bawah ini</div>
+          </div>
+        </div>
+
+        <div class="subpage-stage" data-subpage-stage="true" data-active="about">
+          <div class="subpage-layout">
+            <aside class="subpage-sidemenu" aria-label="Menu dashboard">
+              <button type="button" class="sidebtn is-active" data-side-about>
+                Tentang
+              </button>
+              <button type="button" class="sidebtn" data-side-skill>
+                Skill
+              </button>
+              <button type="button" class="sidebtn" data-side-exp>
+                Pengalaman
+              </button>
+              <button type="button" class="sidebtn" data-side-contact>
+                Kontak
+              </button>
+
+              <a class="side-back" href="index.html" aria-label="Kembali ke halaman awal">
+                ← Kembali
+              </a>
+            </aside>
+
+
+            <div class="subpage-stage-inner">
+              <div class="subpage-panel anim-left-in is-active" data-panel-about aria-hidden="false">
+                <div class="subpage-content">
+                  <h3>Tentang Saya</h3>
+                  <p>Berisi ringkasan singkat tentang Theo Mahdani. Silakan sesuaikan teks sesuai data dirimu.</p>
+                  <div class="grid-2">
+                    <div class="card">
+                      <h3 style="margin:0;color:white;font-size:15px;">Perkenalan Singkat</h3>
+                      <p style="margin-top:10px;">Saya suka belajar hal baru, membangun sesuatu yang berguna, dan fokus
+                        pada UI yang rapi serta mudah digunakan.</p>
+                      <ul class="list" style="margin-top:14px;">
+                        <li>Belajar secara konsisten</li>
+                        <li>Senang mencoba ide baru</li>
+                        <li>Memperhatikan aksesibilitas</li>
+                      </ul>
+                    </div>
+                    <div class="card">
+                      <h3 style="margin:0;color:white;font-size:15px;">Minat & Tujuan</h3>
+                      <ul class="list" style="margin-top:10px;">
+                        <li>Membangun web profil/portfolio</li>
+                        <li>Mendalami HTML, CSS, JavaScript</li>
+                        <li>Membuat halaman responsif</li>
+                      </ul>
+                      <p class="form-note" style="margin-top:14px;">Tips: ubah konten panel sesuai kebutuhan.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subpage-panel" data-panel-skill aria-hidden="true">
+                <div class="subpage-content">
+                  <h3>Skill yang Saya Kuasai</h3>
+                  <p>Indikator persentase ini hanya visual. Sesuaikan dengan skill kamu.</p>
+                  <div class="skills">
+                    <div class="skill">
+                      <div class="topline"><strong>HTML</strong><span class="pill">80%</span></div>
+                      <div class="bar" aria-label="Kemampuan HTML 80%"><span style="width:80%"></span></div>
+                    </div>
+                    <div class="skill">
+                      <div class="topline"><strong>CSS</strong><span class="pill">75%</span></div>
+                      <div class="bar" aria-label="Kemampuan CSS 75%"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="skill">
+                      <div class="topline"><strong>JavaScript</strong><span class="pill">65%</span></div>
+                      <div class="bar" aria-label="Kemampuan JavaScript 65%"><span style="width:65%"></span></div>
+                    </div>
+                    <div class="skill">
+                      <div class="topline"><strong>UI/UX Dasar</strong><span class="pill">70%</span></div>
+                      <div class="bar" aria-label="Kemampuan UI/UX Dasar 70%"><span style="width:70%"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subpage-panel" data-panel-exp aria-hidden="true">
+                <div class="subpage-content">
+                  <h3>Pengalaman / Proyek</h3>
+                  <p>Isi dengan proyek nyata yang pernah kamu buat (atau rencana proyekmu).</p>
+
+                  <div class="timeline">
+                    <div class="item">
+                      <div class="dot" aria-hidden="true"></div>
+                      <div>
+                        <h3>Proyek: Website Profil Sederhana</h3>
+                        <p>Membuat halaman profil dengan struktur HTML yang rapi, styling CSS, dan layout responsif.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="dot" aria-hidden="true"></div>
+                      <div>
+                        <h3>Proyek: Landing Page Tematik</h3>
+                        <p>Membangun UI komponen dengan palet warna konsisten dan section terstruktur.</p>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="dot" aria-hidden="true"></div>
+                      <div>
+                        <h3>Belajar: Interaksi dengan JavaScript</h3>
+                        <p>Menambahkan interaksi ringan seperti animasi dan navigasi smooth scroll.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="subpage-panel" data-panel-contact aria-hidden="true">
+                <div class="subpage-content">
+                  <h3>Kontak</h3>
+                  <p>Form ini demo tanpa backend. Kamu bisa hubungkan ke email/Google Form.</p>
+
+                  <div class="grid-2">
+                    <div class="card">
+                      <h3 style="margin:0;color:white;font-size:15px;">Detail Kontak</h3>
+                      <ul class="list" style="margin-top:12px;">
+                        <li>Email: mahdanitheo1@gmail.com</li>
+                        <li>Lokasi: Jambi, Indonesia</li>
+                        <li>Instagram: thee.odaani</li>
+                      </ul>
+                      <p class="form-note" style="margin-top:14px;">Ubah placeholder sesuai data kamu.</p>
+                    </div>
+
+                    <div class="card">
+                      <form class="contact-form" onsubmit="event.preventDefault(); fakeSubmit();">
+                        <div class="row-2">
+                          <div>
+                            <label for="nama">Nama</label>
+                            <input id="nama" name="nama" type="text" placeholder="Tulis nama kamu" required />
+                          </div>
+                          <div>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="contoh@email.com" required />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label for="pesan">Pesan</label>
+                          <textarea id="pesan" name="pesan" placeholder="Tulis pesan untuk Theo..." required></textarea>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit" style="justify-content:center;">
+                          <span aria-hidden="true">🚀</span> Kirim Pesan
+                        </button>
+                        <p class="form-note" id="submitNote">Belum terkirim. (Demo)</p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bar">
+          <div>© <span id="year"></span> Profil Theo Mahdani</div>
+          <div class="social-icons">
+            <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@username" target="_blank" title="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@channel" target="_blank" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/username" target="_blank" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="home_script.js" defer></script>
+  <script src="profil_subpage.js" defer></script>
+</body>
+
+</html>

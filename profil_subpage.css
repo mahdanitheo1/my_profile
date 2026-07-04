@@ -1,0 +1,280 @@
+/* Subpage layout untuk section: tentang/skill/pengalaman/kontak */
+
+/* container re-use */
+.container {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+}
+
+.subpage {
+    padding: 70px 0 40px;
+}
+
+.subpage-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.subpage-title {
+    margin-left: 20px;
+    margin-top: -30px;
+    color: white;
+    font-size: clamp(26px, 4vw, 38px);
+    letter-spacing: -0.02em;
+    font-weight: 750;
+}
+
+
+
+.subpage-badge {
+    margin-top: 3px;
+    margin-left: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(148, 163, 184, 0.08);
+    color: rgba(226, 232, 240, 0.9);
+    font-weight: 800;
+}
+
+/* panel animasi pindah kiri/kanan */
+.subpage-stage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.subpage-stage-inner {
+    min-height: 360px;
+    position: relative;
+}
+
+.subpage-panel {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    display: block;
+    opacity: 0;
+    transform: translateX(0);
+    pointer-events: none;
+}
+
+.subpage-panel.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+}
+
+/* Animasi arah */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(24px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-24px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-24px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(24px);
+        opacity: 0;
+    }
+}
+
+.subpage-panel.anim-right-in {
+    animation: slideInFromRight 260ms ease forwards;
+}
+
+.subpage-panel.anim-left-in {
+    animation: slideInFromLeft 260ms ease forwards;
+}
+
+.subpage-panel.anim-left-out {
+    animation: slideOutToLeft 220ms ease forwards;
+}
+
+.subpage-panel.anim-right-out {
+    animation: slideOutToRight 220ms ease forwards;
+}
+
+/* Konten panel */
+.subpage-content h3 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.subpage-content p {
+    margin: 0 0 14px;
+    color: rgba(226, 232, 240, 0.85);
+    line-height: 1.8;
+    font-weight: 650;
+}
+
+.subpage-content .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.subpage-content .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+}
+
+.subpage-content ul.list {
+    margin: 0;
+    padding-left: 18px;
+    color: rgba(226, 232, 240, 0.86);
+    line-height: 1.9;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Dashboard kiri */
+.subpage-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 360px;
+}
+
+.subpage-sidemenu {
+    padding: 16px;
+    border-right: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(11, 16, 32, 0.25);
+}
+
+.sidebtn {
+    width: 100%;
+    text-align: left;
+    padding: 12px 12px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(148, 163, 184, 0.06);
+    color: rgba(226, 232, 240, 0.92);
+    font-weight: 900;
+    cursor: pointer;
+    transition: 180ms ease;
+}
+
+.sidebtn:hover {
+    border-color: rgba(96, 165, 250, 0.55);
+    background: rgba(96, 165, 250, 0.12);
+    color: #fff;
+}
+
+.sidebtn.is-active {
+    border-color: rgba(59, 130, 246, 0.55);
+    background: rgba(59, 130, 246, 0.18);
+}
+
+.side-back {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    padding: 12px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(148, 163, 184, 0.08);
+    color: rgba(226, 232, 240, 0.9);
+    font-weight: 900;
+}
+
+.side-back:hover {
+    border-color: rgba(96, 165, 250, 0.55);
+    background: rgba(96, 165, 250, 0.12);
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .subpage-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .subpage-sidemenu {
+        border-right: 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
+}
+
+@media (max-width: 800px) {
+    .subpage-content .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .subpage-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    color: #e5e7eb;
+    letter-spacing: 0.2px;
+}
+
+.brand-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 1), rgba(236, 72, 153, 0.9));
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+}

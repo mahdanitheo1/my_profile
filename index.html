@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil</title>
+  <meta name="description" content="Web Profil Theo Mahdani" />
+
+  <link rel="stylesheet" href="home_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="brand-badge">T</div>
+          <a href="index.html" class="brand-link" aria-label="Kembali ke halaman profil">Profil Theo Mahdani</a>
+        </div>
+      </div>
+
+      <div class="nav-mobile" id="mobileNavDetail" aria-hidden="true">
+        <div class="nav-mobile-panel" role="dialog" aria-label="Menu navigasi" aria-modal="true">
+          <div class="nav-mobile-head">
+            <div class="brand-mini">
+              <div class="brand-badge brand-badge--mini">T</div>
+              <div class="brand-mini-text">Menu</div>
+            </div>
+            <button class="nav-mobile-close" type="button" aria-label="Tutup menu">
+              <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-title">
+              Halo, saya <span class="gradient-text">Theo Mahdani</span>
+            </h1>
+            <p class="hero-subtitle">
+              Saya membuat web ini sebagai profil pribadi. Di halaman ini kamu bisa melihat ringkasan
+              tentang saya, skill yang saya kuasai, serta pengalaman/hal yang pernah saya kerjakan.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="home_profil_detail.html?panel=about" aria-label="Lihat selengkapnya">
+                Lihat Selengkapnya <span aria-hidden="true">➜</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="profile-card" aria-label="Kartu profil">
+            <div class="profile-top">
+              <div class="avatar" title="Avatar Theo">
+                <img class="avatar-photo" alt="Foto Theo" src="/assets/foto1.jpeg" />
+                <div class="avatar-initials">TM</div>
+              </div>
+              <div class="profile-meta">
+                <h2>Theo Mahdani</h2>
+                <p>Mahasiswa / Pelajar • Fokus ke Pengembangan & Kreativitas</p>
+              </div>
+            </div>
+
+            <div class="quick-stats" role="list" aria-label="Ringkasan">
+              <div class="stat" role="listitem"><strong>3+</strong><span>Proyek Latihan</span></div>
+              <div class="stat" role="listitem"><strong>Beginner →</strong><span>Terus Berkembang</span></div>
+              <div class="stat" role="listitem"><strong>UI/UX</strong><span>Perhatian Detail</span></div>
+              <div class="stat" role="listitem"><strong>Web</strong><span>HTML • CSS • JS</span></div>
+            </div>
+
+            <div class="qrfak-box" aria-label="QR Fak">
+              <div class="qrfak-title">Please Scan This QR Code</div>
+              <div class="qrfak-img-wrap">
+                <img class="qrfak-img" src="/assets/qrfak.png" alt="QR Fak" />
+              </div>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-bar">
+          <div>© <span id="year"></span> Profil Theo Mahdani</div>
+          <div class="social-icons" aria-label="Tautan sosial">
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@username" target="_blank" rel="noopener noreferrer" title="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@channel" target="_blank" rel="noopener noreferrer" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/username" target="_blank" rel="noopener noreferrer" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="home_script.js" defer></script>
+</body>
+
+</html>
